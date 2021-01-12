@@ -134,7 +134,8 @@ class Joueur {
             var ey1 = pnjTab[i].y;
             if (x2 > pnjTab[i].x && y2 > pnjTab[i].y && x1 < ex2 && y1 < ey2) {
                 if(pnjTab[i].type== "Arme"){     
-                    
+                    fill(255, 255, 255);
+                    text(pnjTab[i].direArme, ex2, ey1-35, tailleCarre * 4, tailleCarre * 4)
                     if (pnjTab[i].arme == true && stockArme > 0 ) {
                     
                         this.attaque += 1
@@ -142,8 +143,6 @@ class Joueur {
                         console.log(this.attaque);
                         pnjTab[i].arme = false;
                         this.score += 1;
-                        fill(255, 255, 255);
-                        text(pnjTab[i].direArme, ex2, ey1-35, tailleCarre * 4, tailleCarre * 4)
                          
                     }
                 }
